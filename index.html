@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Номерок</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>🚗 Номерок</h1>
+      <div class="balance">💰 <span id="balance">10 000</span> ₽</div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="spin">🎰 Крутить</button>
+      <button class="tab" data-tab="garage">🚗 Гараж</button>
+    </div>
+
+    <section id="spin" class="page active">
+      <div class="spin-area">
+        <div id="result" class="result">Нажми «Крутить», чтобы выбить номер</div>
+      </div>
+
+      <div class="spin-buttons">
+        <button class="spin-btn" data-price="1000" data-luck="1">
+          <span>Обычный</span>
+          <small>1 000 ₽ · ×1</small>
+        </button>
+        <button class="spin-btn" data-price="8000" data-luck="8">
+          <span>Необычный</span>
+          <small>8 000 ₽ · ×8</small>
+        </button>
+        <button class="spin-btn" data-price="35000" data-luck="35">
+          <span>Редкий</span>
+          <small>35 000 ₽ · ×35</small>
+        </button>
+        <button class="spin-btn" data-price="100000" data-luck="100">
+          <span>Эпический</span>
+          <small>100 000 ₽ · ×100</small>
+        </button>
+        <button class="spin-btn" data-price="300000" data-luck="300">
+          <span>Легендарный</span>
+          <small>300 000 ₽ · ×300</small>
+        </button>
+      </div>
+    </section>
+
+    <section id="garage" class="page">
+      <div id="garage-list" class="garage-list">
+        <p class="empty">Гараж пуст. Крути номера!</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
